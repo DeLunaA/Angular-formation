@@ -1,0 +1,25 @@
+
+<div class="wrapper fadeInDonw">
+
+  <div id="formContent">
+      <div class="alertwarn alert-warning"  *ngIf='invalidLogin'>{{errorMessage}}</div>
+      <div class="alertsucc alert-success" *ngIf='loginSuccess'>{{successMessage}}</div>
+      <h3>Login</h3>
+
+      <form>
+          <input type="text" id="username" [(ngModel)]="user.username" name="username" placeholder="username">
+          <input type="password" id="password" [(ngModel)]="user.password" name="password" placeholder="password">
+          <div id="but-check" class="divrmb" >
+              <input type="checkbox" id="checky" [(ngModel)]="isChecked" [ngModelOptions]="{ standalone: true }" for="remember-me">
+              <label for="check" class="chekyy" >  remember me  </label>
+         </div>
+          <input type="submit"  (click)=handleLogin()  value="Log In">
+        </form>
+        
+
+  </div>
+
+
+
+
+</div>
